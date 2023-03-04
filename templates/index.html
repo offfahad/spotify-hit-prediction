@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl items-center justify-center">Songs Hit Prediction</span>
+          </a>
+          </nav>
+        </div>
+      </header>
+      <div class="container -my-8">
+        <form action="/", method="POST">
+            <div class="mb-1">
+              <label for="Dancibilty" class="form-label">Dancibilty</label>
+              <input type="number" step="any" class="form-control" id="Dancibilty" name="Dancibilty" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-1">
+              <label for="energy" class="form-label">Energy</label>
+              <input type="number" step="any" class="form-control" id="energy" name="energy">
+            </div>
+            <div class="mb-1">
+                <label for="key" class="form-label">Key</label>
+                <input type="number" step="any" class="form-control" id="key" name="key">
+              </div>
+              <div class="mb-1">
+                <label for="loudness" class="form-label">Loudness</label>
+                <input type="number" step="any" class="form-control" id="loudness" name="loudness">
+              </div>
+              <div class="mb-1">
+                <label for="mode" class="form-label">Mode</label>
+                <input type="number" step="any" class="form-control" id="mode" name="mode">
+              </div>
+              <div class="mb-1">
+                <label for="speechiness" class="form-label">Speechiness</label>
+                <input type="number" step="any" class="form-control" id="speechiness" name="speechiness">
+              </div>
+              <div class="mb-1">
+                <label for="acousticness" class="form-label">Acousticness</label>
+                <input type="number" step="any" class="form-control" id="acousticness" name="acousticness">
+              </div>
+              <div class="mb-1">
+                <label for="instrumentalness" class="form-label">Instrumentalness</label>
+                <input type="number" step="any" class="form-control" id="instrumentalness" name="instrumentalness">
+              </div>
+              <div class="mb-1">
+                <label for="liveness" class="form-label">Liveness</label>
+                <input type="number" step="any" class="form-control" id="liveness" name="liveness">
+              </div>
+              <div class="mb-1">
+                <label for="valence" class="form-label">Valence</label>
+                <input type="number" step="any" class="form-control" id="valence" name="valence">
+              </div>
+              <div class="mb-1">
+                <label for="tempo" class="form-label">Tempo</label>
+                <input type="number" step="any" class="form-control" id="tempo" name="tempo">
+              </div>
+              <div class="mb-1">
+                <label for="duration_ms" class="form-label">Duration MS</label>
+                <input type="number" step="any" class="form-control" id="duration_ms" name="duration_ms">
+              </div>
+              <div class="mb-1">
+                <label for="time_signature" class="form-label">Time Signature</label>
+                <input type="number" step="any" class="form-control" id="time_signature" name="time_signature">
+              </div>
+              <div class="mb-1">
+                <label for="chorus_hit" class="form-label">Chorus Hit</label>
+                <input type="number" step="any" class="form-control" id="chorus_hit" name="chorus_hit">
+              </div>
+              <div class="mb-1">
+                <label for="sections" class="form-label">Sections</label>
+                <input type="number" step="any" class="form-control" id="sections" name="sections">
+              </div>
+              <div class="mb-1">
+                <label for="decade" class="form-label">decade</label>
+                <input type="number" step="any" class="form-control" id="decade" name="decade">
+              </div>
+              <div class="text-center my-4">
+                <button type="submit" class="btn btn-primary bg-primary btn-lg">Submit</button>
+              </div>
+          </form>
+          <div class="ml-3 text-xl text-center my-4">
+            <h3>{{prediction_text}}</h3>
+          </div>
+          <br><br>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
