@@ -46,7 +46,7 @@ def predict():
         prediction = model.predict(scaled_inputs)
 
         model_result = prediction
-        print("Model Prediction: ",model_result)
+        print("Model Prediction: ", model_result)
         if model_result == 1:
             hit = "Hit"
         else:
@@ -58,5 +58,8 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # If you want to run your application on just on local host uncomment the line below and run
+    # app.run(debug=True)
 
+    # If you want to run your application in your machine ip address
+    app.run(debug=True, port=5000, host='0.0.0.0')
